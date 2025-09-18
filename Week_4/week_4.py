@@ -36,7 +36,7 @@ for number in range (38,1051,2):
 for number in range(37,1051):
     if number % 2 == 0:
         print(number)
-'''
+
 
 
 #Question 4
@@ -55,3 +55,30 @@ while True:
 
 # Print out the final word
 print(f"The final word is {word}")
+
+
+
+# Question 5
+
+for number in range(51,518):
+    if number % 2 == 1:
+        print(number)
+
+# Or
+
+for number in range (51,518,2):
+    print(number)
+
+# Or
+'''
+start = 50
+end = 517
+
+# Assume 50-517. Inclusive
+
+# Start with 51 and stop before 518, take steps of 2
+
+for i in range(start + 1, end + 1, 2):
+    print(i)
+
+# Question 6
