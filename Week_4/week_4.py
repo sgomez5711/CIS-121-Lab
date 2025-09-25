@@ -1,6 +1,6 @@
 # Steve Gomez
 
-'''
+
 larger_num = int(input("Enter the larger number: "))
 smaller_num = int(input("Enter the smaller number: "))
 
@@ -46,7 +46,7 @@ word = ""
 while True:
     # Read the user input
     user_in = input("Enter a letter: ")
-    # if the user tyoed "done" we stop !
+    # if the user typed "done" we stop !
     if user_in == "done":
         break
     else:
@@ -70,7 +70,7 @@ for number in range (51,518,2):
     print(number)
 
 # Or
-'''
+
 start = 50
 end = 517
 
@@ -82,3 +82,13 @@ for i in range(start + 1, end + 1, 2):
     print(i)
 
 # Question 6
+
+total = 0
+
+while True:
+    num = int((input"Enter a number or a negative number to stop: "))
+    if num < 0:
+        break
+    total += num
+
+print(total)
