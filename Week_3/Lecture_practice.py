@@ -109,7 +109,6 @@ count = 0
 
 for letter in word:
     count += 1
-    
 
 print(count)
 
@@ -239,7 +238,7 @@ def product(num1, num2):
     return product
 
 print(product(4,3))
-'''
+
 
 #In python, a list starts with [ and end with]
 
@@ -266,3 +265,160 @@ print(x)
 print(lyst)
 lyst.append(12)
 print(lyst)
+
+
+
+#Lecture practice 9/30/25
+
+lyst = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+
+#print(x[2])
+#print(x[1:4])
+
+#for element in lyst:
+ #   print(element)
+
+#print(lyst)
+#lyst.append('Saturday')
+#lyst.append('Sunday')
+#print(lyst)
+
+
+#print nes in Wednesday only
+
+#print(lyst[2][3:6])
+
+#x = 'Wednesday'
+#print(x[3:6])
+
+
+#print(lyst)
+
+#lyst[4]= 'Funday'
+
+#print(lyst)
+
+x = 'apple'
+y = x
+print(x)
+print(y)
+
+x += 's'
+print(x)
+print(y)
+
+#immuatble object
+
+
+#mutable object
+
+#workdays = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday')
+#y = x
+
+#print(x)
+#print(y)
+
+#print(workdays)
+#workdays[4] = 'Funday'
+#print(workdays)
+
+#print(x)
+#print(y)
+
+
+# Write a function that takes a string as an agrument, and returns a list containing all of the words in that string.
+
+my_word = "Peter Piper picked a peck of pickled peppers."
+result = ['Peter', 'Piper', 'picked', 'a', 'peck', 'of', 'pickled', 'peppers.']
+          
+
+def string_to_list(word):
+    words = []
+    # collect a word
+    built_word = ''
+    for letter in word:
+        if letter == ' ':
+            # add built_word into the list
+            words.append(built_word)
+            built_word = ''
+        #once we have a full word, let's add it to the list of words.
+        else:
+            built_word += letter
+        words.append(built_word)
+        built_word = ''
+            
+
+
+    #once we have a full word, let's add it to the list of words.
+    return words
+
+
+
+print(string_to_list(word))
+
+def string_to_list(word):
+    words = []
+    built_word = ''
+    for index in range(len(word)) :
+        if word[index] == ' ' or index == len(word)-1:
+            words.append(built_word)
+            built_word = ''
+        else:
+            built_word += word[index]
+    return words
+
+
+print(string_to_list(my_word))
+
+
+
+
+#Lecture practice 10/2/2025
+
+
+def string_to_list(word):
+    words = []
+    # collect a word
+    built_word = ''
+    vowel_count = 0
+    for letter in word:
+       # print(letter, vowel_count)
+        if letter == ' ':
+            # add built_word into the list if amount of vowels >= 2.
+            if vowel_count >= 2:
+                words.append(built_word)
+            built_word = ''
+            vowel_count = 0
+        #once we have a full word, let's add it to the list of words.
+        else:
+            built_word += letter
+            if letter in 'aeiou':
+                vowel_count += 1
+
+    if vowel_count >= 2:
+     words.append(built_word)
+    return words
+
+'''
+    
+
+#my_word = "Peter Piper picked a peck of pickled peppers."
+#result = ['Peter', 'Piper', 'picked', 'a', 'peck', 'of', 'pickled', 'peppers.']
+
+
+# write a function that takes a string as an argument, and returns a list containing all of the words in that string.
+
+
+phonebook = {'matt':5073891438, 'ashley': 12345}
+#print(phonebook)
+
+#to add to. a dictionary, we use name_of_dict [ key ] = value
+phonebook['waters'] = 789
+print(phonebook)
+
+# to look up a value in a dictionary, we use name_of_dict[ key ]
+print(phonebook['matt'])
+#print(phonebook['martensen'])
+
+for person in phonebook.keys():
+    print(person, phonebook[person])
