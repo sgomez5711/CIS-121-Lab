@@ -399,7 +399,7 @@ def string_to_list(word):
      words.append(built_word)
     return words
 
-'''
+
     
 
 #my_word = "Peter Piper picked a peck of pickled peppers."
@@ -422,3 +422,46 @@ print(phonebook['matt'])
 
 for person in phonebook.keys():
     print(person, phonebook[person])
+
+
+# write a function that takes a string as an argument and returns a dictionary contaonong all pf the unique words in that string.
+
+    def string_to_dictionary(word):
+        string_as_list = word.split()
+        word_dictionary = {}
+        for word in string_as_list:
+            word_dictionary[word] = 'in word'
+        return word_dictionary
+    
+print(string_to_dictionary)(my_words)
+
+'''
+
+# Lecture practice 10/7/2025
+
+my_word = "peter piper picked a peck of pickled peppers."
+
+# Write a function that returns a dictionary containing how many times each letter appears.
+
+
+def letter_counter(word):
+    letter_dictionary = { }
+    for letter in word:
+        if letter in letter_dictionary:
+            #add in key value pair. What are key and value?
+            letter_dictionary[letter] = letter_dictionary[letter] + 1
+            #letter_dictionary[letter] += 1
+        else: # key is NOT in dictionary.
+            # add in key value pair. What are key and value?
+            letter_dictionary[letter] = 1
+
+    return letter_dictionary
+
+my_word = "peter piper picked a peck of pickled peppers."
+letter_dict = letter_counter(my_word)
+
+for letter in letter_dict:
+    print(letter, letter_dict[letter])
+
+# Result should look similat to something like this: d = {'p':9,'e':???}
+
