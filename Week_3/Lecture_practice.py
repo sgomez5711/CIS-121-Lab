@@ -502,3 +502,5 @@ def string_to_list_with_vowels(word):
 my_word = 'peter piper picked a peck of pickled pepprs'
 print(string_to_list_with_vowels(my_word))
 
+# Lecture 10/16/25
+
