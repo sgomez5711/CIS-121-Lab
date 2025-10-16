@@ -435,7 +435,7 @@ for person in phonebook.keys():
     
 print(string_to_dictionary)(my_words)
 
-'''
+
 
 # Lecture practice 10/7/2025
 
@@ -464,4 +464,41 @@ for letter in letter_dict:
     print(letter, letter_dict[letter])
 
 # Result should look similat to something like this: d = {'p':9,'e':???}
+
+
+
+def add_three(x):
+    y = x + 3
+    return y
+
+var0 = 7
+var1 = add_three(var0)
+
+print(y)
+
+
+
+# Lecture practice 10/9/25
+
+
+'''
+
+# Lecture practice 10/14/25
+# Debugging
+
+def string_to_list_with_vowels(word):
+    words = []
+    #collect a word
+    built_word = ''
+    vowel_count = 0
+    for letter in word:
+        if letter == ' ':
+            words.append(built_word)
+        else:
+            built_word = ''
+            built_word += letter
+    return words
+
+my_word = 'peter piper picked a peck of pickled pepprs'
+print(string_to_list_with_vowels(my_word))
 
